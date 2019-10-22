@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ChatRoomMenu from "components/ChatRoom/ChatRoomMenu";
-import TopBar from "components/Statusbar/TopBar";
+import StatusBar from "components/Statusbar/StatusBar";
 import ChatRoomMessageBox from "components/ChatRoom/ChatRoomMessageBox";
 import { CSSTransitionGroup } from "react-transition-group";
 import ChatRoomReceiveMessage from "components/ChatRoom/ChatRoomReceiveMessage";
@@ -16,7 +16,7 @@ class ChatRoomMain extends Component {
         transitionAppear={true}
       >
         <div className="ChatRoomMain">
-          <TopBar />
+          <StatusBar />
         </div>
       </CSSTransitionGroup>
     );

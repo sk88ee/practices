@@ -1,0 +1,171 @@
+.Statusbar {
+    position : relative;
+    width: 375px;
+    height: 20px;
+    background-color: var(--purple);
+}
+.Light {
+    width: 375px;
+    height: 20px;
+}
+.Low-Bar {
+    position: absolute;
+    left: 6px;
+    top: 11px;
+    width: 3px;
+    height: 4px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Middle-Bar {
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    width: 3px;
+    height: 6px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Top-Bar {
+    position: absolute;
+    left: 14px;
+    top: 7px;
+    width: 3px;
+    height: 8px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Full-Bars {
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    width: 12px;
+    height: 8px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Empty-Bar {
+    position: absolute;
+    left: 18px;
+    top: 5px;
+    width: 3px;
+    height: 10px;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.Carrier {
+    position: absolute;
+    left: 26px;
+    top: 2.5px;
+    width: 33px;
+    height: 16px;
+    opacity: 0.8;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: -0.05px;
+    color: var(--white);
+}
+
+time {
+    position: absolute;
+    top:2.5px;
+    left:166px;
+    width: 42px;
+    height: 16px;
+    opacity: 0.8;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--white);
+  }
+.Portrait-Lock {
+    position: absolute;
+    left: 247.5px;
+    top: 5px;
+    width: 11.5px;
+    height: 10px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Wifi {
+    position: absolute;
+    left: 73px; 
+    width: 12px; 
+    height:20px;
+    opacity: 0.5;
+    background-color: var(--purple);
+}
+.Battery {
+    position: absolute;
+    top: 3.5px;
+    left: 343px;
+    width:24px; 
+    height:9.5px;
+    border:2px solid #ffffff;
+    border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+}
+.Battery:before{
+    position: absolute; 
+    display:block; 
+    content:''; 
+    margin: 1.5px;
+    width: 21px;
+    height: 6.5px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Battery-final {
+    position: absolute; 
+    top: 7.8px;
+    left: 372px;
+    width: 1.5px;
+    height: 4.9px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.Bluetooth {
+    position: absolute;
+    top: 3px;
+    left: 292px;
+    width: 23px;
+    height: 12px;
+    opacity: 0.5;
+    background-color: var(--purple);
+}
+.Active-Location {
+    display: absolute;
+    top: 5.5px;
+    left: 265px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+    background-color: var(--white);
+}
+.BatteryPercent{
+    position: absolute;
+    top: 2.5px;
+    left: 310px;
+    width: 30px;
+    height: 16px;
+    opacity: 0.8;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: right;
+    color: var(--white);
+  }

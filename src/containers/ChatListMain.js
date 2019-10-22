@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { CSSTransitionGroup } from "react-transition-group";
-import TopBar from "components/Statusbar/TopBar";
+import StatusBar from "components/Statusbar/StatusBar";
 import ChatListMenu from "ChatListMenu";
 import LoadChatLog from "LoadChatLog";
 
@@ -15,7 +15,7 @@ class ChatListMain extends Component {
         transitionAppear={true}
       >
         <div className="ChatMain">
-          <TopBar />
+          <StatusBar />
         </div>
       </CSSTransitionGroup>
     );
