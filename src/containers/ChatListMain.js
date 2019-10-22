@@ -1,24 +1,21 @@
 import React, { Component } from "react";
-import { CSSTransitionGroup } from "react-transition-group";
 import StatusBar from "components/Statusbar/StatusBar";
-import ChatListMenu from "ChatListMenu";
-import LoadChatLog from "LoadChatLog";
+import ListMenu from "components/Menu/ListMenu";
+import RoomList from "components/Room/RoomList";
 
 import "./ChatListMain.css";
 
 class ChatListMain extends Component {
+  
   render() {
     return (
-      <CSSTransitionGroup
-        transitionName="SliderRight"
-        transitionAppearTimeout={500}
-        transitionAppear={true}
-      >
         <div className="ChatMain">
           <StatusBar />
+          <ListMenu />
+          <RoomList />
         </div>
-      </CSSTransitionGroup>
     );
+  
   }
 
   /*

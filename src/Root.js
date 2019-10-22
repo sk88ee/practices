@@ -12,4 +12,4 @@ const Root = () => (
   </Router>
 );
 
-export default Main;
+export default Root;
