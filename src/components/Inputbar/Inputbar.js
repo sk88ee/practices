@@ -4,56 +4,27 @@ import React, { Component } from "react";
 import "./InputBar.css";
 import sendImage from "assets/img-send.svg";
 
-class InputBar extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      msg: []
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleSubmit = e => {
-    var msgArray = this.state.msg;
-
-    if (this._inputElement.value != "") {
-      msgArray.push({
-        text: this._inputElement.value,
-        key: Date.now()
-      });
-
-      this.setState({
-        msg: msgArray
-      });
-      this._inputElement.value = "";
-    }
-
-    e.preventDefault();
-  };
-
-  render() {
+const InputBar = ({handleChange, handleSubmit}) => {
     return (
       <div>
-        <form onSubmit={this.props.handleSubmit} className="InputChatBox">
-          <input
+        <form onSubmit={handleSubmit} className="InputChatBox">
+          <input onChange={handleChange}
             placeHolder="메세지를 입력하세요.."
             className="InputChatMessage"
-            ref={a => (this._inputElement = a)}
+            //ref={a => (this._inputElement = a)}
           />
         </form>
-        <form onSubmit={this.props.handleSubmit} className="MailBox">
+        <form onSubmit={handleSubmit} className="MailBox">
           <input
             type="image"
             className="img_send"
             src={sendImage}
             alt="Submit"
-            onClick={this.handleSubmit}
+            onClick={handleSubmit}
           />
         </form>
       </div>
     );
-  }
 }
 
 export default InputBar;

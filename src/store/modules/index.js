@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import ListMenu from "./ListMenu";
-import InputBar from "./InputBar";
+import listmenu from "./ListMenu";
+import inputbar from "./InputBar";
 
 export default combineReducers({
-    ListMenu,
-    InputBar
+    listmenu,
+    inputbar
 });

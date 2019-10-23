@@ -8,12 +8,8 @@ import uploadImage from "assets/img-upload.svg";
 import searchImage from "assets/img-search.svg";
 
 class RoomMenu extends Component {
-
-    render() {
-        return (
-            <div>
-                <div className="ChatRoomMenu">
-                    <Link to="/">
+/*
+                   <Link to="/">
                         <img src={backImage} className="img_back" alt="img-back" />
                     </Link>
                     <div className="ChatSender">{this.props.sender}</div>
@@ -33,6 +29,11 @@ class RoomMenu extends Component {
                     <PictureMenu />
                     : null}
             </div>
+            */
+    render() {
+        return (
+                <div className="ChatRoomMenu"/>
+ 
         );
     }
 
