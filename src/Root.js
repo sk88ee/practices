@@ -6,10 +6,12 @@ import ChatRoom from "containers/ChatRoomMain";
 const Root = () => (
   <Router>
     <div>
-      <Route exact path="/" component={ChatMain} />
-      <Route path="/chatRoom/:id" component={ChatRoom} />
+      <ChatRoom />
     </div>
   </Router>
 );
-
+/*
+    <Route exact path="/" component={ChatMain} />
+      <Route path="/chatRoom/:id" component={ChatRoom} />
+      */
 export default Root;

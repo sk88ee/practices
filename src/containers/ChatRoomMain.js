@@ -1,16 +1,32 @@
 import React, { Component } from "react";
 import StatusBar from "components/Statusbar/StatusBar";
+import RoomMenu from "components/Menu/RoomMenu";
+import PictureMenu from "components/Menu/PictureMenu";
+import RoomSelected from "components/Room/RoomSelected";
+import InputBar from "components/Inputbar/InputBar";
 
 import "./ChatRoomMain.css";
 
 class ChatRoomMain extends Component {
+  handleSubmit = msg => {
+
+  };
+
   render() {
     return (
+        <div>
         <div className="ChatRoomMain">
           <StatusBar />
+          <RoomMenu />
+        </div>
+        <div>
+          <InputBar onSubmit={this.handleSubmit} />
+        </div>
         </div>
     );
   }
+
+
   /*
     <div className="ChatRoomMain">
           <TopBar />

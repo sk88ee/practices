@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import "./ChatListMenu.css";
+import "./ListMenu.css";
 import menuImage from "assets/menu.svg";
 import friendImage from "assets/friend.svg";
 
-class ChatListMenu extends Component {
+class ListMenu extends Component {
 
     render() {
         return (
@@ -18,4 +18,4 @@ class ChatListMenu extends Component {
 
 }
 
-export default ChatListMenu;
+export default ListMenu;

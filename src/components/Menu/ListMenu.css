@@ -1,0 +1,39 @@
+.MenuBar {
+    position: relative;
+    width: 375px;
+    height: 44px;
+    background-color: var(--purple);
+}
+.Title{
+    position: absolute;
+    top: 12px;
+    left: 170px;
+    width: 36px;
+    height: 20px;
+    font-family: AppleSDGothicNeo;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.12px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .MenuImage {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  .Friend {
+    position: absolute;
+    top: 10px;
+    left: 339px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }

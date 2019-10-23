@@ -12,10 +12,10 @@ class ChatListMain extends Component {
         <div className="ChatMain">
           <StatusBar />
           <ListMenu />
-          <RoomList />
+        
         </div>
     );
-  
+    //<RoomList />
   }
 
   /*
