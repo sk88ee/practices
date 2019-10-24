@@ -18,6 +18,7 @@ class ChatRoomMain extends Component {
   }
 
   handleSubmit = (e) => {
+    e.preventDefault();
     console.log("submit =" + e.target.submit.value)
     const { InputActions } = this.props;
     InputActions.sendMessage(e.target.submit.value);
@@ -27,13 +28,13 @@ class ChatRoomMain extends Component {
   render() {
     const { handleChange, handleSubmit } = this;
     const { sendMsg, msgList } = this.props;
-    console.log("msg = " + sendMsg + ", list = " + msgList)
+  
     return (
       <div>
         <div className="ChatRoomMain">
           <StatusBar />
           <RoomMenu />
-          <RoomSelected msgList={sendMsg}/>
+          <RoomSelected msgList={msgList}/>
         </div>
         <div>
           <InputBar input={sendMsg} onChange={handleChange} onSubmit={handleSubmit} />
@@ -59,7 +60,8 @@ class ChatRoomMain extends Component {
 
 export default connect(
   (state) => ({
-    sendMsg: state.inputbar.sendMsg
+    sendMsg: state.inputbar.get('sendMsg'),
+    msgList: state.inputbar.get('msgList')
   }),
   dispatch => ({
     InputActions: bindActionCreators(inputAction, dispatch)

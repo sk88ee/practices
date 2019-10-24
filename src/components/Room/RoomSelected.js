@@ -8,10 +8,10 @@ const RoomSelected = ({msgList}) => {
     console.log(msgList);
     const receiveMsg = msgList.map(
         recvMsg => {
-            const { msg } = recvMsg.toJS();
+            const { id, data } = recvMsg.toJS();
             return(
                 <div className="SendChatBox">
-                    <div className="SendChatMessage">{msg}</div>
+                    <div className="SendChatMessage">{data}</div>
                 </div>
             )
         }
