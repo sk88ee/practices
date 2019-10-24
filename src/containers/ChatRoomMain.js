@@ -4,33 +4,39 @@ import RoomMenu from "components/Menu/RoomMenu";
 import PictureMenu from "components/Menu/PictureMenu";
 import RoomSelected from "components/Room/RoomSelected";
 import InputBar from "components/Inputbar/InputBar";
-import * as inputAction from "store/modules/InputBar";
+import * as inputAction from "store/modules/inputbar";
 import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
 import "./ChatRoomMain.css";
-import { bindActionCreators } from "../../../../../../../../AppData/Local/Microsoft/TypeScript/3.6/node_modules/redux";
+
 
 class ChatRoomMain extends Component {
   handleChange = (e) => {
-    console.log(e.target.value);
+    console.log(e.target.value)
     const { InputActions } = this.props;
     InputActions.updateMessage(e.target.value);
   }
 
-  handleSubmit = e => {
-    console.log(e.target.value);
+  handleSubmit = (e) => {
+    console.log("submit =" + e.target.submit.value)
     const { InputActions } = this.props;
-    InputActions.sendMessage(e.target.value);
+    InputActions.sendMessage(e.target.submit.value);
+    InputActions.updateMessage('');
   };
 
   render() {
+    const { handleChange, handleSubmit } = this;
+    const { sendMsg, msgList } = this.props;
+    console.log("msg = " + sendMsg + ", list = " + msgList)
     return (
       <div>
         <div className="ChatRoomMain">
           <StatusBar />
           <RoomMenu />
+          <RoomSelected msgList={sendMsg}/>
         </div>
         <div>
-          <InputBar onChange={this.handleChange} onSubmit={this.handleSubmit} />
+          <InputBar input={sendMsg} onChange={handleChange} onSubmit={handleSubmit} />
         </div>
       </div>
     );
@@ -52,8 +58,8 @@ class ChatRoomMain extends Component {
 }
 
 export default connect(
-  ({inputbar}) => ({
-    msg: inputbar.sendMsg
+  (state) => ({
+    sendMsg: state.inputbar.sendMsg
   }),
   dispatch => ({
     InputActions: bindActionCreators(inputAction, dispatch)
